@@ -21,14 +21,11 @@ $(document).ready(function() {
 
     $('.square').one("click", playMove);
 
-    // var circlePoints = 0;
-    // var crossPoints = 0;
-
     $('.square').on('click', function() {
-        //circle wins
+        //circle wins (this function evaluates is the first line combination of the game === the actual winning combination and so on for every combination of circles and crosses)
         if ($('#sqOne').hasClass('circle') && $('#sqTwo').hasClass('circle') && $('#sqThree').hasClass('circle')) {
             setTimeout(function() {
-                swal({
+                swal({ // this is the sweet alert
                         title: "YOU WON!!!",
                         text: "Wanna play again?!",
                         type: "success",

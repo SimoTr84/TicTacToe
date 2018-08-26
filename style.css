@@ -7,39 +7,44 @@ body {
     height: 100vh;
     font-family: 'Megrim', cursive;
     text-align: center;
-}
-
-h1 {
-    font-size: 80px;
-    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .titleBlock {
     margin: 0;
-    padding: 70px;
-    width: 90.75%;
+    width: 100%;
     background-color: rgba(152, 170, 169, .3);
     box-shadow: 20px 20px 20px rgba(0, 0, 0, .5);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 }
 
+h1 {
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+}
+
 .squares {
-    display: block;
-    margin: 7% 32%;
     width: 600px;
+    height: 600px;
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .square {
-    width: 150px;
-    height: 150px;
-    border-radius: 5px;
-    box-shadow: 20px 20px 20px rgba(0, 0, 0, .7);
+    width: 30.333%;
+    height: 30.333%;
     background-size: cover;
     float: left;
-    display: inline-block;
-    margin: 10px;
+    margin: 1%;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, .7);
 }
 
 .circle {
