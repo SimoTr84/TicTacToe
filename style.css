@@ -10,6 +10,10 @@ body {
     margin: 0;
     padding: 0;
 }
+    body.stop-scrolling {
+        height: 100vh;
+        overflow: hidden;
+    }
 
 .titleBlock {
     margin: 0;
@@ -22,23 +26,27 @@ body {
 }
 
 h1 {
-    font-size: 80px;
-    line-height: 100px;
+    font-size: 70px;
+    line-height: 1em;
     text-align: center;
 }
 
-.squares {
-    width: 600px;
-    height: 600px;
-    position: relative;
-    top: 30%;
+.squares_container {
+    width: 60vw;
+    height: 60vw;
+    max-width: 600px;
+    max-height: 600px;
+    min-width: 300px;
+    min-height: 300px;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-45%,-30%);
 }
 
 .square {
-    width: 30.333%;
-    height: 30.333%;
+    width: 29%;
+    height: 29%;
     background-size: cover;
     float: left;
     margin: 1%;
@@ -46,14 +54,24 @@ h1 {
     border-radius: 5px;
     box-shadow: 20px 20px 20px rgba(0, 0, 0, .7);
 }
+    #sqOne,
+    #sqFour,
+    #sqSeven {
+        margin-left: 0;
+    }
+    #sqThree,
+    #sqSix,
+    #sqNine {
+        margin-right: 0;
+    }
 
 .circle {
-    -webkit-animation: simbolsFadeIn 1s;
+    -webkit-animation: simbolsFadeIn .5s;
     background-image: url('images/circle.png');
 }
 
 .cross {
-    -webkit-animation: simbolsFadeIn 1s;
+    -webkit-animation: simbolsFadeIn .5s;
     background-image: url('images/cross.png');
 }
 
@@ -75,5 +93,15 @@ h1 {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    h1 {
+        font-size: 50px;
+    }
+    .square {
+        width: 28%;
+        height: 28%;
     }
 }
